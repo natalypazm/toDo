@@ -1,0 +1,10 @@
+.addButton{
+    position: fixed !important;
+    bottom: 15px;
+    right: 10px;
+
+}
+.addButton svg{
+    font-size: 70px;
+    color: #3e4e83; 
+}

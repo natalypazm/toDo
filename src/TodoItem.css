@@ -1,0 +1,27 @@
+.toDoItem{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 8px;
+}
+
+.itemText{
+    min-width: 250px;
+    text-align: left;
+}
+
+.itemText-complete{
+    text-decoration: line-through;
+}
+
+.iconTrash{
+    visibility: hidden;
+}
+
+.toDoItem:hover .iconTrash {
+    visibility: visible;
+}
