@@ -2,9 +2,11 @@ import React, { Fragment } from "react";
 import { TextField } from "@mui/material";
 
 import './ToDoSearch.css';
+import { TodoContext } from "../Context";
 
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch() {
+    const {searchValue, setSearchValue} = React.useContext(TodoContext);
     const onSearchValueChange = (e) => {
         setSearchValue(e.target.value)
     }
