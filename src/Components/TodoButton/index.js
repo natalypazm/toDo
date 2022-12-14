@@ -4,9 +4,13 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 import './ToDoButton.css'
 
-function TodoButton(){
+function TodoButton(props){
+    const onClickButton = () => {
+        props.setOpenModal(prevState => !prevState);
+    };
+
     return (
-        <IconButton className="addButton" aria-label="add" size="large">
+        <IconButton onClick={onClickButton} className="addButton" aria-label="add" size="large">
             <AddCircleOutlineIcon/>
         </IconButton>
     )

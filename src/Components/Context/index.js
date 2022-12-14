@@ -25,6 +25,15 @@ function TodoProvider(props) {
         })
     };
     
+    const addTodo = (text) => {
+        const newTodos = [...todos];
+        newTodos.push({
+            completed: false,
+            text
+        });
+        saveTodos(newTodos);
+    }
+
     const completeTodo = (text) => {
         const todoIndex = todos.findIndex(todo => todo.text === text);
         const newTodos = [...todos];
@@ -38,7 +47,9 @@ function TodoProvider(props) {
         newTodos.splice(todoIndex, 1);
         saveTodos(newTodos);
     }
-      
+    
+    const [openModal, setOpenModal] = React.useState(false);
+
     return (
         <TodoContext.Provider value={{
             loading,
@@ -48,8 +59,11 @@ function TodoProvider(props) {
             searchValue,
             setSearchValue,
             searchTodos,
+            addTodo,
             completeTodo,
             deleteTodo,
+            openModal,
+            setOpenModal
 
         }}>
             {props.children}
