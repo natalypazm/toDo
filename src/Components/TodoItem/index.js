@@ -1,9 +1,9 @@
-import { IconButton } from "@mui/material";
 import React from "react";
-import './TodoItem.css'
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import IconButton from "@mui/material/IconButton";
 import DeleteIcon from '@mui/icons-material/Delete'
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import './TodoItem.css'
 
 function TodoItem (props){
     const isCompleted = props.completed;

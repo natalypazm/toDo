@@ -7,6 +7,7 @@ import { TodoItem } from '../TodoItem';
 import { TodoList } from '../TodoList';
 import {TodoSearch} from '../TodoSearch';
 import { MyModal } from "../Modal";
+import { MyLoader } from "../Loader";
 
 function AppUI(){
     const {
@@ -20,12 +21,12 @@ function AppUI(){
     } = React.useContext(TodoContext);
 
     return (
-        <React.Fragment>
+        <React.Fragment>    
             <TodoCounter/>
             <TodoSearch />
             <TodoList>
                 {error && <p>Hubo un error</p>}
-                {loading && <p>Está cargando</p>}
+                {loading && <MyLoader/>}
                 {(!loading && !searchTodos.length) && <p>Crea un nuevo todo</p>}
                 {searchTodos.map (todo => (
                     <TodoItem
